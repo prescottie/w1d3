@@ -1,15 +1,19 @@
 // var str = process.argv.slice(2);
 function countLetters(str){
+  var letters = str.split(' ').join('');
   var output = {};
-  var letterCount = 0;
-  for (var i = 0; i < str.length; i++){
-    if (/\w/.test(str[i])) {
-      str[i] = 'letter';
+
+  for (var i in letters) {
+    var propName = letters[i];
+    if (output[propName]){
+      output[propName] = output[propName] + 1;
+    } else {
+      output[propName] = 1;
     }
 
 
   }
-// return output;
+return output;
 
 }
 console.log(countLetters("lighthouse in the house"));
