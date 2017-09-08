@@ -11,8 +11,8 @@ function calculateSalesTax(salesData, taxRates) {
       } else {
         totalTaxes[data.name] = { totalSales: sale, totalTax: tax};
       }
-    })
-  })
+    });
+  });
   console.log(totalTaxes);
 }
 
